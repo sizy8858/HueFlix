@@ -1,7 +1,6 @@
 # HueFlix
 
 HueFlix는 Netflix 스타일의 영화 평점 및 추천 서비스를 제공하는 웹 애플리케이션입니다.
-
 <details>
   <summary>
     Content
@@ -12,6 +11,8 @@ HueFlix는 Netflix 스타일의 영화 평점 및 추천 서비스를 제공하�
   - [ 페이지 소개](#페이지-소개)
   - [ 개발 환경](#개발-환경)
   - [ 느낀점](#느낀점)
+
+</details>
 
 ## 주요 기능
 
@@ -189,7 +190,6 @@ JavaScript의 Ajax 함수를 사용하여 TMDB API에 데이터를 요청해서 
     - Language : Java, Jsp, HTML, CSS, JavaScript, SQL, Spring Legacy, mybatis
 
     - Framework : Spring Tool suite 3.9.1
-## 느낀점
 
 ## 느낀점
 

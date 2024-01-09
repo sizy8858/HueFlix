@@ -42,7 +42,7 @@ public class BoardController {
         model.addAttribute("profile_img", uService.getUserProfile(userEmail));
 
     }
-	
+
 	private static final Logger logger = LoggerFactory.getLogger(BoardController.class);
 	
 	@Autowired
@@ -135,4 +135,5 @@ public class BoardController {
 		rttr.addFlashAttribute("msg", "success");
 		return "redirect:/board/notice";
 	}
+
 }

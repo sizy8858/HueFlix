@@ -11,47 +11,6 @@
     <link rel="stylesheet" type="text/css" href="/ex/resources/css/subHeader.css">
     
     <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        var buttons = document.querySelectorAll("#menu button");
-
-        // 함수를 사용하여 메뉴 활성화 상태를 설정
-        function setActiveButton() {
-            var currentPath = window.location.pathname;
-
-            buttons.forEach(function (button) {
-                if (button.getAttribute("id") === currentPath.substr(currentPath.lastIndexOf('/') + 1)) {
-                    button.classList.add("active");
-                } else {
-                    button.classList.remove("active");
-                }
-            });
-        }
-
-        // 페이지 로드 시 활성화 상태를 설정
-        setActiveButton();
-
-        // 각 버튼 클릭 시 활성화 상태를 설정하고 URL 변경
-        buttons.forEach(function (button) {
-            button.addEventListener("click", function () {
-                buttons.forEach(function (btn) {
-                    btn.classList.remove("active");
-                });
-
-                button.classList.add("active");
-
-                // 페이지 이동 없이 URL 변경
-                var href = button.getAttribute("id");
-                history.pushState(null, null, href);
-
-                // 활성화 상태를 설정
-                setActiveButton();
-            });
-        });
-
-        // 브라우저의 뒤로 가기, 앞으로 가기에 대한 이벤트 처리
-        window.addEventListener("popstate", setActiveButton);
-    });
-
 $(document).ready(function() {
 	// URL에서 쿼리 매개변수 추출
 	const urlParams = new URLSearchParams(window.location.search);

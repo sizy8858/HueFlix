@@ -12,7 +12,10 @@
             const movieId = urlParams.get('movieId');
             var tmdbTitle;
 			var tmdbReleaseDate;
-
+			var currentPage = window.location.href;
+	           if (currentPage.includes("/board/movieDetail/cast")) {
+	               document.getElementById("cast").classList.add("active");
+	           }
 			$.ajax({
 			    url: "https://api.themoviedb.org/3/movie/" + movieId + "/credits?language=ko-kr&region=KR&api_key=d266bc87db778e91facf58b4bcde4f31",
 			    method: "GET",

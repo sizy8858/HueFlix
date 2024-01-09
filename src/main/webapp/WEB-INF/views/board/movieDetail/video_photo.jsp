@@ -13,7 +13,10 @@
             const movieId = urlParams.get('movieId');
             const tmdbTitle = urlParams.get('tmdbTitle');
 			const tmdbReleaseDate = urlParams.get('tmdbReleaseDate');;
-			
+			var currentPage = window.location.href;
+	           if (currentPage.includes("/board/movieDetail/video_photo")) {
+	               document.getElementById("video_photo").classList.add("active");
+	           } 
 			console.log(tmdbTitle);
 			
 			// TMDB의 데이터와 KMDB의 데이터를 더 정확하게 연결하기 위해 영화명과 개봉일자가 같은 데이터의 포토/영상만 추출

@@ -51,6 +51,10 @@
          var perPageNum= 10;
          const urlParams = new URLSearchParams(window.location.search);
             const movieId = urlParams.get('movieId');
+            var currentPage = window.location.href;
+            if (currentPage.includes("/board/movieDetail/reply")) {
+                document.getElementById("reply").classList.add("active");
+            } 
         $(document).ready(function() {
             // URL에서 쿼리 매개변수 추출
             

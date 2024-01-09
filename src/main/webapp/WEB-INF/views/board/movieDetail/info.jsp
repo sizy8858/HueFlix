@@ -10,7 +10,10 @@
             // URL에서 쿼리 매개변수 추출
             const urlParams = new URLSearchParams(window.location.search);
             const movieId = urlParams.get('movieId');
-
+            var currentPage = window.location.href;
+            if (currentPage.includes("/board/movieDetail/info")) {
+                document.getElementById("info").classList.add("active");
+            } 
             $.ajax({
                 url: "https://api.themoviedb.org/3/movie/" + movieId + "?language=ko-kr&api_key=d266bc87db778e91facf58b4bcde4f31",
                 method: "GET",
